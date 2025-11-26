@@ -1,0 +1,20 @@
+version: v3.1
+participants:
+  - name: local_dds
+    kind: local
+  - name: server_tcp
+    kind: wan
+    discovery-addresses:
+      - <SERVER_IP>   # replace with central server IP
+    listening-addresses: []
+    transport: tcp
+
+allowlist:
+  - { name: /atlas/velodyne_points, type: sensor_msgs::msg::PointCloud2 }
+  - { name: /atlas/imu/data, type: sensor_msgs::msg::Imu }
+  - { name: /atlas/odom, type: nav_msgs::msg::Odometry }
+  - { name: /tf, type: tf2_msgs::msg::TFMessage }
+  - { name: /tf_static, type: tf2_msgs::msg::TFMessage }
+  # - { name: /bestla/velodyne_points, type: sensor_msgs::msg::PointCloud2 }
+  # - { name: /bestla/imu/data, type: sensor_msgs::msg::Imu }
+  # - { name: /bestla/odom, type: nav_msgs::msg::Odometry }
