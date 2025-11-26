@@ -2,6 +2,8 @@
 **AERIS-SLAM | ROS2, SLAM-GMAPPING**  
 **Aug 2025 – Present**
 
+![Full Assembly](./full_assembled_view.jpeg)
+
 AERIS-SLAM is a multi-robot exploration and mapping system built using **ROS2** and **SLAM-GMapping** for 2D LiDAR-based mapping.  
 The project combines a **9-DoF hexacopter** with **three autonomous differential-drive ground robots**, enabling collaborative mapping, object detection, and autonomous mission execution in outdoor, GPS-denied environments.
 
@@ -17,6 +19,12 @@ The project combines a **9-DoF hexacopter** with **three autonomous differential
 - Assigns exploration points based on map coverage  
 
 ### **Ground Robots**
+<p align="center">
+  <img src="./robot1_front.jpeg" width="45%" />
+  <img src="./robot2_front.jpeg" width="45%" />
+</p>
+
+
 Each robot is equipped with:
 - **2D LiDAR** → for SLAM-GMapping  
 - **Camera** → for object detection & grasping only (not SLAM)  
@@ -67,7 +75,7 @@ The UAV acts as a mission supervisor:
 | Component | Technology Used |
 |----------|-----------------|
 | Robot OS | **ROS2** |
-| SLAM | **SLAM-GMapping** |
+| SLAM | **SLAM-GMAPPING** |
 | Map fusion | Custom multi-robot map merging (ROS2) |
 | Communication | ROS2 DDS |
 | Navigation | ROS2 Nav2 (DWB/DWA local planner) |
@@ -78,4 +86,3 @@ The UAV acts as a mission supervisor:
 ---
 
 ## 📂 Repository Structure (Suggested)
-
